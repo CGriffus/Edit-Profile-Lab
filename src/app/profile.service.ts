@@ -13,11 +13,18 @@ export class ProfileService {
 
   constructor(private router: Router) {}
 
-  getUserProfile(): object | void {
+  getUserProfile(): object {
     return this.userProfile;
   }
-  // this.router.navigate(["profile"]);
-  setUserProfile() {}
+
+  setUserProfile(newName: string, newContact: string, newBio: string): void {
+    this.userProfile = {
+      name: newName,
+      contactInfo: newContact,
+      bio: newBio
+    };
+    this.router.navigate(["profile"]);
+  }
 
   editProfile(): void {
     this.router.navigate(["edit"]);

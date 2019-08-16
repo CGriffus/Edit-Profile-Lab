@@ -1,9 +1,9 @@
-<div>
-  <img src="" alt="" />
+<div id="profile">
+  <img src="../../assets/moon-moon.jpg" alt="" />
 
   <h1>{{ user.name }}</h1>
-  <p>{{ user.contactInfo }}</p>
-  <p>{{ user.bio }}</p>
+  <p id="contact">{{ user.contactInfo }}</p>
+  <p id="bio">{{ user.bio }}</p>
 
-  <button (click)="goToEdit()">Edit</button>
+  <button id="editBtn" (click)="goToEdit()">Edit</button>
 </div>

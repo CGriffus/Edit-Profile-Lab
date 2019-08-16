@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
     this.user = this.profileService.getUserProfile();
   }
 
-  goToEdit() {
+  goToEdit(): void {
     this.profileService.editProfile();
   }
 }

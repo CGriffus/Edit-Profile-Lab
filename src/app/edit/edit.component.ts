@@ -7,9 +7,19 @@ import { ProfileService } from "../profile.service";
   styleUrls: ["./edit.component.css"]
 })
 export class EditComponent implements OnInit {
+  user: object;
+
   constructor(private profileService: ProfileService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = this.profileService.getUserProfile();
+  }
 
-  updateProfile() {}
+  updateProfile(form) {
+    this.profileService.setUserProfile(
+      form.value.name,
+      form.value.contact,
+      form.value.bio
+    );
+  }
 }
