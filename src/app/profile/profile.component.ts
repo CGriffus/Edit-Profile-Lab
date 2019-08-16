@@ -7,11 +7,15 @@ import { ProfileService } from "../profile.service";
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
+  user: any;
+
   constructor(private profileService: ProfileService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = this.profileService.getUserProfile();
+  }
 
   goToEdit() {
-    this.profileService.goToEdit();
+    this.profileService.editProfile();
   }
 }

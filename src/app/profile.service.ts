@@ -5,9 +5,21 @@ import { Router } from "@angular/router";
   providedIn: "root"
 })
 export class ProfileService {
+  userProfile: object = {
+    name: "Cait",
+    contactInfo: "caitling@umich.edu",
+    bio: "Front-end developer"
+  };
+
   constructor(private router: Router) {}
 
-  goToEdit() {
-    this.router.navigate("/edit");
+  getUserProfile(): object | void {
+    return this.userProfile;
+  }
+  // this.router.navigate(["profile"]);
+  setUserProfile() {}
+
+  editProfile(): void {
+    this.router.navigate(["edit"]);
   }
 }
