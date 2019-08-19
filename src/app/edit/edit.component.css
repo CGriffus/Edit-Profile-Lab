@@ -9,7 +9,54 @@
   align-items: center;
 }
 
+h3 {
+  margin-top: 20px;
+  color: #505355;
+}
+
 form {
   display: flex;
   flex-direction: column;
+  margin: 15px;
+  width: 90%;
+}
+
+label {
+  color: #1ecefd;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 14px;
+  border-radius: 30px;
+  border: 1px solid #505355;
+  width: 90%;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+textarea {
+  padding: 14px;
+  border-radius: 30px;
+  border: 1px solid #505355;
+  font-family: "Work Sans", sans-serif;
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+#updateBtn {
+  background: #505355;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  width: 100%;
+  align-self: center;
+}
+
+#updateBtn:hover {
+  background: #5becd8;
 }
